@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Arrays</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Массив государств</h2>
+        <div id="content"> </div>
+        <script>
+            function printArray(gos){
+                for(var i=0; i<gos.length; i++){
+                    var myP=document.createElement('p');
+                    myP.innerHTML=gos[i];
+                    document.getElementById('content').appendChild(myP);
+                }//for
+            }//function
+            var countries=['Eesti', 'Russia', 'Germany', 'China'];
+            
+            printArray(countries);
+        </script>
+    </body>
+</html>
