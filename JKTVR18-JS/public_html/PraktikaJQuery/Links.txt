@@ -1,0 +1,10 @@
+﻿JQuery
+https://www.w3schools.com/jquery/default.asp
+
+Bootstrap
+https://getbootstrap.com/
+
+https://getbootstrap.com/
+
+Функция плавности (easing)
+https://easings.net/ru

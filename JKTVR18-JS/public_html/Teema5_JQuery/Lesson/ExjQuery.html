@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Example 1 jQuery</h1>
+            <h2>Show-Hide paragraph</h2>
+            
+            <hr>
+            
+            <h3>Heading1</h3>
+            <a href="#" id="n1">Click me</a>
+            <p id="t1">New message</p>
+            
+            <hr>
+            
+            <h3>Heading2</h3>
+            <a href="#" id="n2">Toggle</a>
+            <p id="t2">New message2</p>
+            
+            <hr>
+            
+            <h3>Counter</h3>
+            <input type="text" id="username" maxlength="10" >
+            <p id="result"></p>
+            <p id="counter"></p>
+            
+        </div>
+        <script>
+            $(document).ready(function(){
+               var control=false;//show-hide object
+               $('#n1').click(function(){
+                  if(control==false){
+                      control=true;
+                      $('#t1').fadeOut(1000);
+                      $('#n1').html('Show');
+                  }else{
+                      control=false;
+                      $('#t1').fadeIn(1000);
+                      $('#n1').html('Hide');
+                  };//if
+               });//click.function n1
+               
+               $('#n2').click(function(){
+                   $('#t2').toggle(1000);
+               });//n2 click
+               
+               $('#username').attr('maxlength',15);//set
+               $('#result').text('Введено символов: '+$(this).val().length);
+               $('#username').keyup(function(){
+                   var k=$(this).val().length;
+                   $('#result').text('Введено символов: '+$(this).val().length);
+                   // осталось?
+                   var n=$('#username').attr('maxlength');//get
+                   $('#counter').text('Осталось для ввода: '+(n-k)+' из '+n);
+               });//keyup
+            });//ready.function
+        </script>
+    </body>
+</html>
