@@ -1,24 +1,15 @@
 section{
 	margin: 50px 50px 50px 50px;
-	height: 500px;
 	background-color: lightyellow;
 	border: solid 3px;
 	width: 90%;
+	overflow: hidden;
 
 }
 section p{
 	padding: 30px 30px 0px 0px;
 }
-.two{
-	float: right;
-	width: 50%;
-}
-.one{
-	float: left;
-	width: 50%;
-	padding: 20px 0px 30px 0px;
-	text-align: center;
-}
+
 section h2{
 	text-align: center;
 }
@@ -26,7 +17,7 @@ section h2{
 	text-align: center;
 }
 body{
-	background-color: gold;
+	background-color: Moccasin;
 }
 header{
 	height: 130px;
@@ -37,7 +28,6 @@ header{
 	border: solid 3px lightyellow;
 }
 hgroup{
-	padding-right: 100px;
     text-align: center;
 }
 nav{
@@ -66,4 +56,14 @@ article h3{
 	text-align: right;
 	padding-top: 50px;
 	padding-right: 50px;
+}
+.three{
+	columns: 2;
+}
+div{
+	padding: 10px;
+}
+img{
+	padding-left: 30px;
+	padding-bottom: 30px;
 }

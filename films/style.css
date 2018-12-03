@@ -6,7 +6,6 @@ header{
 	color: white;
 }
 hgroup{
-	padding-right: 100px;
     text-align: center;
 }
 nav{
@@ -37,7 +36,7 @@ nav a:hover{
 	overflow: hidden;
 	text-align: center;
 	background-color: lightblue;
-	border: solid 3px olive;
+	border: solid 3px;
 }
 .film{
     margin: 10px 0px 4px 30px;
@@ -47,6 +46,9 @@ nav a:hover{
 img{
     float:left; /* Выравнивание по правому краю  */ 
     margin: 10px 25px 10px 20px; /* Отступы вокруг картинки */
+    width: 300px;
+    height: 423px;
+    border: solid 1px;
 }
 .film_section{
 	columns: 2;
@@ -60,4 +62,11 @@ article h2{
 }
 body{
 	background-color: lightyellow;
+}
+.back{
+	padding: 0px 30px 0px 0px;
+
+}
+.back h2{
+	text-align: center;
 }
