@@ -54,8 +54,8 @@
             <h2 id="about_h" style="display:none;">About this page</h2>
             <p class="lead" id="about_p" style="display:none;">This is a great place to talk about your webpage. This template is purposefully unstyled 
 			so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-            <ul id="about_p">
-              <li>Clickable nav links that smooth scroll to page sections</li>
+            <ul id="about_ul" style="display:none;">
+              <li >Clickable nav links that smooth scroll to page sections</li>
               <li>Responsive behavior when clicking nav links perfect for a one page website</li>
               <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
               <li>Minimal custom CSS so you are free to explore your own unique design options</li>
@@ -110,13 +110,16 @@
                 control_main=true;
                 control_ser=false;
                 control_contact=false;
-                $('#main_sec').show();
-                $('#main_h').fadeIn(1500);
+                $('#main_sec').fadeIn(1000);
+                $('#main_h').fadeIn(1000);
                 $('#main_p').fadeIn(1500);
                 $('#about_sec').hide();
                 $('#about_h').hide();
                 $('#about_p').hide();
+                $('#about_ul').hide();
                 $('#ser_sec').hide();
+                $('#ser_h').hide();
+                $('#ser_p').hide();
                 $('#contact_sec').hide();
                 $('#contact_h').hide();
                 $('#contact_p').hide();
@@ -131,9 +134,10 @@
                 $('#main_sec').hide();
                 $('#main_h').hide();
                 $('#main_p').hide();
-                $('#about_sec').show();
-                $('#about_h').fadeIn(1500);
+                $('#about_sec').fadeIn(1000);
+                $('#about_h').fadeIn(1000);
                 $('#about_p').fadeIn(1500);
+                $('#about_ul').fadeIn(1500);
                 $('#ser_sec').hide();
                 $('#ser_h').hide();
                 $('#ser_p').hide();
@@ -154,8 +158,9 @@
                 $('#about_sec').hide();
                 $('#about_h').hide();
                 $('#about_p').hide();
-                $('#ser_sec').show();
-                $('#ser_h').fadeIn(1500);
+                $('#about_ul').hide();
+                $('#ser_sec').fadeIn(1000);
+                $('#ser_h').fadeIn(1000);
                 $('#ser_p').fadeIn(1500);
                 $('#contact_sec').hide();
                 $('#contact_h').hide();
@@ -174,11 +179,12 @@
                 $('#about_sec').hide();
                 $('#about_h').hide();
                 $('#about_p').hide();
+                $('#about_ul').hide();
                 $('#ser_sec').hide();
                 $('#ser_h').hide();
                 $('#ser_p').hide();
-                $('#contact_sec').show();
-                $('#contact_h').fadeIn(1500);
+                $('#contact_sec').fadeIn(1000);
+                $('#contact_h').fadeIn(1000);
                 $('#contact_p').fadeIn(1500);
             };//if
         });//click.function n1

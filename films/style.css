@@ -70,3 +70,12 @@ body{
 .back h2{
 	text-align: center;
 }
+footer{
+	border:5px inset khaki;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+#clear{
+	clear: both;
+}

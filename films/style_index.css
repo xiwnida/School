@@ -67,3 +67,12 @@ img{
 	padding-left: 30px;
 	padding-bottom: 30px;
 }
+footer{
+	border:5px inset lightyellow;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+#clear{
+	clear: both;
+}

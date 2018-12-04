@@ -54,3 +54,11 @@ img{
 .back h2{
 	text-align: center;
 }
+footer{
+	border:5px inset;
+	text-align: center;
+	background-color: lightyellow;
+}
+#clear{
+	clear: both;
+}
