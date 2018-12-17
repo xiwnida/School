@@ -1,0 +1,37 @@
+/*-------------------Общие--------------------*/
+body{
+	background-color: green;
+	font-family: Tahoma,Arial;
+	font-size: 14px;
+	padding: 20px;
+}
+p{
+	margin: 0 0 15px 0;
+}
+a{
+	text-decoration: none;
+	color: purple;
+}
+a:hover{
+	color: black;
+}
+#main{
+	width: 100%;
+	margin: auto;
+	color: white;
+}
+#menu{
+	width: 100%;
+	height: 150px;
+	background-color: gray;
+	text-align: center;
+}
+#content{
+	width: 100%;
+	background-color: white;
+	color: gray;
+	text-align: justify;
+}
+#content a:hover{
+	color: blue;
+}

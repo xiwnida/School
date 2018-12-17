@@ -1,0 +1,104 @@
+header{
+	height: 130px;
+	width: 100%;
+	border: solid black;
+	background-color: lightblue;
+}
+hgroup{
+	padding-right: 100px;
+	padding-top: 1px;
+    text-align: right;
+}
+nav{
+	width: 100%;
+	border: solid;
+	font-size: 20px;
+	font-family: cursive;
+	background-color: lightyellow;
+}
+nav ul{
+	padding: auto;
+}
+nav li{
+	display: inline-block;
+	width: auto;
+}
+nav a{
+	margin-right: 30px;
+	text-decoration: none;
+}
+nav a:hover{
+	text-decoration: underline;
+	border-bottom: none;
+	color: gray;
+}
+footer{
+	width: 100%;
+	border:5px inset orange;
+	background-color: lightblue;
+}
+footer p{
+	padding-left: 10px;
+}
+main{
+	width: 100%;
+	margin: 0px 2%;
+}
+aside{
+	border: 5px solid gray;
+	padding: 5px;
+	margin-right: 10px;
+	width: 16%;
+	min-height: 350px;
+	height: 100%;
+	float: left;
+	background-color: lightgray;
+}
+aside section{
+	padding: 10px;
+	overflow: hidden;
+	border: 1px solid olive;
+	background-color: white;
+	margin-bottom: 10px;
+}
+#content{
+	border: 5px solid gray;
+	padding: 5px;
+	width: 78%;
+	overflow: hidden;
+	background-color: lightgray;
+	min-height: 931px;
+	height: 100%;
+}
+#clear{
+	clear: both;
+}
+div section{
+	margin: 20px;
+	border: 1px solid olive;
+	padding-left: 10px;
+	overflow: hidden;
+	background-color: lightyellow;
+}
+article{
+	width: 23%;
+	float: left;
+	justify-content: center;
+	margin: 10px;
+}
+article h2{
+	text-align: center;
+}
+article p{
+	text-align: justify;
+}
+
+section a{
+	font-family: cursive;
+	text-decoration: none;
+}
+section a:hover{
+	text-decoration: underline;
+	border-bottom: none;
+	color: gray;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Work_Array</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+            var school=[
+                {
+                    group:"JKTVR18",
+                    students:[
+                        {name:"Вера",
+                         tel:"555 01"},
+                        {name:"Роман",
+                         tel:"555 02"},
+                        {name:"Ксенья",
+                         tel:"555 03"},
+                        {name:"Надежда",
+                         tel:"555 04"},
+                        {name:"Никита",
+                         tel:"555 05"}
+                        ]
+                 
+                },
+                {
+                    group:"PLKR16",
+                    students:[
+                        {name:"Вера",
+                         tel:"555 01"},
+                        {name:"Сандра",
+                         tel:"555 06"},
+                        {name:"Аида",
+                         tel:"555 07"},
+                        {name:"Сергей",
+                         tel:"555 08"},
+                        {name:"Александра",
+                         tel:"555 09"}
+                        ]
+                 
+                }
+            ];
+            function printS(mS){
+                    var mDiv=document.createElement('div');
+                    mDiv.innerHTML='<h3>'+mS.group+'</h3>';
+                    document.getElementById('content').appendChild(mDiv);
+                    //--------------
+                    var mUl=document.createElement('ul');
+                    mDiv.appendChild(mUl);
+                    for(var i=0; i<mS.students.length; i++){
+                        var mLi=document.createElement('li');
+                        mLi.innerHTML=mS.students[i].name+'. tel: '+mS.students[i].tel;
+                        mUl.appendChild(mLi);
+                    }
+                }
+                for (var i=0; i<school.length; i++){
+                    printS(school[i]);
+                }
+        </script>
+    </body>
+</html>

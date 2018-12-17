@@ -1,0 +1,22 @@
+body {
+	background-color: lightblue;
+    padding-right: 100px;
+    padding-left: 100px;}
+
+h2{
+      background-color: lightyellow;
+      border: 2px solid black;
+      text-align: center;}
+
+h1{
+      background-color: gold;
+      border: 2px solid black;
+      text-align: center;}
+h3 {text-align: center}
+
+
+.cen {text-align: center;}
+.ram {padding-right: 300px;
+    padding-left: 300px;}
+.header{background-color: gray;
+      border: 2px solid black;}
