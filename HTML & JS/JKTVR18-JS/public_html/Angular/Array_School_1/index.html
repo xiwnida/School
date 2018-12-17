@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="schoolApp">
+    <head>
+        <title>Students</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.js" type="text/javascript"></script>
+        <script src="js/school.js" type="text/javascript"></script>
+        <style>
+            .my{
+                width:250px;
+                height: 210px;
+                float:left;
+                margin: 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="schoolCtr">
+            <h2>{{title}}</h2>
+            <div ng-repeat="s in stu" class="my">
+                <h2>{{s.name}}</h2>
+                <img ng-if="s.photo" ng-src="images/{{s.photo}}">
+                <img ng-if="!s.photo" ng-src="images/nophoto.jpg">
+                <p>Group: {{s.group}}</p>
+                <p>Age: {{s.age}}</p>
+                <p>Adress: {{s.adress.citi}}, {{s.adress.street}} {{s.adress.house}}</p>
+            
+        </div>
+        </div>
+        
+        
+    </body>
+</html>

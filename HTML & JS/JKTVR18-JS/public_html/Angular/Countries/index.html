@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="worldApp">
+    <head>
+        <title>Angular Array MVC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.js" type="text/javascript"></script>
+        <script src="js/world.js" type="text/javascript"></script>
+        <style>
+            table, th, th{
+                border:1px solid #ddd;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+            tr:nth-child(even){
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="worldCtr">
+            <h2>{{title}}</h2>
+            <table>
+                <tr>
+                    <th>Countries</th>
+                    <th>Population</th>
+                    <th>Capital</th>
+                    <th>Cities - (Population)</th>
+                    <th>Language</th>
+                </tr>
+                <tr ng-repeat='country in countries'>
+                <td>{{country.name}}</td>
+                <td>{{country.population}}</td>
+                <td>{{country.capital}}</td>
+                <td>
+                    <ul ng-repeat='city in country.cities'>
+                        <li>
+                            {{city.name}} - {{city.population}}
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ul ng-repeat='language in country.languages'>
+                        <li ng-if='language.isOffical' style='color:blue'>
+                            {{language.name}} (Официальный)
+                        </li>
+                        <li ng-if='!language.isOffical' style='color: red'>
+                            {{language.name}}
+                        </li>
+                    </ul>
+                </td>
+                </tr>
+                
+                
+                
+            </table>
+        </div>
+        
+        <script>
+            
+        </script>
+    </body>
+</html>
