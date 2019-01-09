@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Работа с формами</h1>
+	<form>
+		<label>Имя пользователя</label> <input type="text" name="user" size="10" maxlength="12" placeholder="Username" required></p>
+		<label>Пароль</label><input type="password" name="parol" required></p>
+		<label>Пол:</label> 
+			Ж<input type="radio" name="sex" checked value="female">
+			М<input type="radio" name="sex" value="male">?<input type="radio" name="sex" value="trans"></p>
+		<label>Язык: </label>
+			Русскй<input type="checkbox" name="rus">
+			Эстонский<input type="checkbox" name="est">
+			Английский<input type="checkbox" name="eng">
+			Финский<input type="checkbox" name="fin">
+			Немецкий<input type="checkbox" name="de">
+		</p>
+		<label>Ваш комментарий:</label></br>
+		<textarea cols="15" rows="5"></textarea>
+	</p>
+	<select required>
+		<option value="" hidden="">Выбери цвет:</option>
+		<option value="blue">Синий</option>
+		<option value="red">Красный</option>
+		<option value="green">Зеленый</option>
+		<option value="yellow">Желтый</option>
+		<option value="purple">Фиолетовый</option>
+	</select>
+	<select required size="4" multiple>
+		<optgroup label="Теплые цвета">
+			<option value="red">Красный</option>
+			<option value="yellow">Желтый</option>
+		</optgroup>
+		<optgroup label="Холодные цвета">
+			<option value="blue">Синий</option>
+			<option value="green">Зеленый</option>
+		</optgroup>
+	</select></p>
+	<label><input type="radio" name="color" value="white">Белый<br></label>
+	<label><input type="radio" name="color" value="green">Зеленый<br></label>
+	<label><input type="radio" name="color" value="blue">Синий<br></label>
+	<hr>
+	<label><input type="radio" name="color2" value="yellow">Желтый<br></label>
+	<label><input type="radio" name="color2" value="orange">Оранжевый<br></label>
+	<label><input type="radio" name="color2" value="black">Черный<br></label>
+
+	<input type="number" name="scale" value="1" min="1" max="5" step="0.5">
+	<input type="range" name="scale2" value="-10" min="-10" max="10" step="2">
+	</p>
+
+    <label>Дата:</label><input type="date" name="date"></p>
+	<label>Дата и время:</label><input type="datetime" name="date"></p>
+	<label>Год и месяц:</label><input type="month" name="date"></p>
+	<label>Год и неделя:</label><input type="week" name="date"></p>
+	<label>Время:</label><input type="time" name="date"></p>
+	<label>Местное время:</label><input type="datetime-local" name="date"></p>
+
+	<input type="SEARCH" name="poisk" list="pop3" size="30">
+	<datalist>
+		<option value="word1">
+		<option value="word2">
+		<option value="word3">
+		<option value="word4">
+	</datalist>
+	<input type="submit" name="Search"></p>
+	<input type="submit" name="ok" value="Accept form">
+	<input type="reset" name="reset" value="Clear form">
+	</form>
+
+</body>
+</html>
