@@ -67,7 +67,7 @@ class Cat:
     weight=''
 
     def meow(self):
-        print(cat.name,'says "meow"')
+        print(self.name,'says "meow"')
 
 snow=Cat()
 snow.name='Снежок'
@@ -94,9 +94,12 @@ my_adress.printAdress()
 
 #3
 class Monster:
+    
+    monCount=0
     def __init__(self, name, health=100):
         self.name=name
         self.health=health
+        Monster.monCount+=1
 
     def decreaseHealth(self, amount):
         self.health-=amount
@@ -110,3 +113,9 @@ skelet=Monster('Скелет', 50)
 skelet.decreaseHealth(20)
 skelet.decreaseHealth(5)
 skelet.decreaseHealth(40)
+
+print(skelet.__dict__)
+print(skelet.__doc__)
+print(skelet.__module__)
+print(dir(skelet))
+print(vars(skelet))
