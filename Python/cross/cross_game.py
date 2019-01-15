@@ -8,14 +8,19 @@ cross = pygame.image.load("cross.png")
 null = pygame.image.load("null.png")
 x=0
 y=0
+cross_static=0
+null_static=0
+dead_heat=0
 win=False
 turn='cross'
 first='cross'
 cords=[[0,600,600,800],[0,0,200,200],[200,0,400,200],[400,0,600,200],[0,200,200,400],[200,200,400,400],[400,200,600,400],[0,400,200,600],[200,400,400,600],[400,400,600,600]] #Содержит координаты прямоугольников
-fields=[None, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+fields=[None, 0, 0, 0, 0, 0, 0, 0, 0, 0] #содержит значения квадратов
 tekst_font = pygame.font.Font(None, 50)
+tekst_font2 = pygame.font.Font(None, 30)
 tekst = tekst_font.render("Очередь крестов", 1, [204, 0, 0])
 again=tekst_font.render("Нажми, чтобы играть еще", 1, [204, 0, 0])
+static=tekst_font2.render("Кресты: "+str(cross_static)+ " Нули: "+str(null_static)+" Ничьих: "+str(dead_heat), 1, [204,0,0])
 
 def WinControl(player):
     global fields
@@ -23,11 +28,17 @@ def WinControl(player):
     global first
     global turn
     global tekst
+    global cross_static
+    global null_static
+    global dead_heat
     if 0 not in fields:
         tekst = tekst_font.render("Ничья!", 1, [204, 0, 0])
         pygame.draw.rect(screen, white, [10,610,590,790], 0)
+        dead_heat+=1
+        static=tekst_font2.render("Кресты: "+str(cross_static)+ " Нули: "+str(null_static)+" Ничьих: "+str(dead_heat), 1, [204,0,0])
         screen.blit(tekst, [240, 670])
         screen.blit(again, [90, 720])
+        screen.blit(static, [5, 775])
         player=''
         win=True
     elif fields[1]==fields[2]==fields[3]==player:
@@ -63,8 +74,11 @@ def WinControl(player):
         if player=='cross':
             tekst = tekst_font.render("Кресты победили!", 1, [204, 0, 0])
             pygame.draw.rect(screen, white, [10,610,590,790], 0)
+            cross_static+=1
+            static=tekst_font2.render("Кресты: "+str(cross_static)+ " Нули: "+str(null_static)+" Ничьих: "+str(dead_heat), 1, [204,0,0])
             screen.blit(tekst, [150, 670])
             screen.blit(again, [90, 720])
+            screen.blit(static, [5, 775])
             turn='cross'
             tekst = tekst_font.render("Очередь крестов", 1, [204, 0, 0])
             first='cross'
@@ -72,8 +86,12 @@ def WinControl(player):
         elif player=='null':
             tekst = tekst_font.render("Нули победили!", 1, [204, 0, 0])
             pygame.draw.rect(screen, white, [10,610,590,790], 0)
+            null_static+=1
+            static=tekst_font2.render("Кресты: "+str(cross_static)+ " Нули: "+str(null_static)+" Ничьих: "+str(dead_heat), 1, [204,0,0])
             screen.blit(tekst, [150, 670])
             screen.blit(again, [90, 720])
+            screen.blit(static, [5, 775])
+            
             turn='null'
             tekst = tekst_font.render("Очередь нулей", 1, [204, 0, 0])
             first='null'
