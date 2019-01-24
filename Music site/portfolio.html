@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Responsive webdesign</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="reset.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="author" content="Ilja">
+	<link rel="shortcut icon" href="img/earphone.png">
+	<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+</head>
+<body>
+
+	<div id="kogusisu">
+		<div id="pais">
+			<h1>DJ website</h1>
+			<h2>Music for your style</h2>
+			<nav id="menuu">
+				<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Price list</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Stuff</a></li>
+				<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<div id="sisu">
+			<ul id="filters">
+				<li><a href="#" data-filter='*'>Show all</a></li>
+				<li><a href="#" data-filter='.guitar'>Guitar</a></li>
+				<li><a href="#" data-filter='.drum'>Drum</a></li>
+				<li><a href="#" data-filter='.bass'>Bass and...</a></li>
+			</ul>
+			<div id="container">
+				<div class="item drum"><img src="img/drum.jpg"></div>
+				<div class="item drum"><img src="img/drum.jpg"></div>
+				<div class="item guitar"><img src="img/guitar.jpg"></div>
+				<div class="item bass"><img src="img/bass.jpg"></div>
+				<div class="item drum"><img src="img/drum.jpg"></div>
+				<div class="item guitar"><img src="img/guitar.jpg"></div>
+				<div class="item drum"><img src="img/drum.jpg"></div>
+				<div class="item drum"><img src="img/drum.jpg"></div>
+				<div class="item guitar"><img src="img/guitar.jpg"></div>
+				<div class="item bass"><img src="img/bass.jpg"></div>
+				<div class="item bass"><img src="img/bass.jpg"></div>
+			</div>
+			
+		</div>
+
+	<div id="jalus">
+		<p>+372 555 555 | xxx@xxx.com | Kohtla-Jarve ESTONIA</p>	
+		
+	</div>
+
+<script>
+	  	var $container = $('#container');
+	  
+		$container.isotope({
+		  itemSelector : '.item',
+		  layoutMode : 'fitRows',	
+		});
+ 
+		// filtri lingid
+			$('#filters a').click(function(){
+			  var selector = $(this).attr('data-filter');
+			  $container.isotope({ filter: selector });
+			  return false;
+			});
+	</script>
+</body>
+</html>
