@@ -19,7 +19,7 @@ WHERE project_no = 'p2' AND emp_no < 10000
 --5.4  ====  Выполните выборку табельных номеров всех сотрудников, которые не приступили к работе над проектом в 2007 г.
 SELECT emp_no, enter_date
 FROM works_on
-WHERE enter_date LIKE '___[^7]%'
+WHERE enter_date NOT LIKE '2007%'
 
 SELECT emp_no, enter_date
 FROM works_on

@@ -346,6 +346,6 @@ while running:
     player.image = player.sprite[player.direction][player.num]
     
     pygame.display.flip()
-    pygame.time.delay(80) 
+    pygame.time.delay(40) 
 
 pygame.quit()

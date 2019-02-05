@@ -101,3 +101,43 @@ WHERE project_name LIKE '%[_]%'
 SELECT *
 FROM project
 WHERE project_name LIKE '%!_%' ESCAPE '!'
+
+
+--==========GROUP BY=============
+
+SELECT * FROM works_on
+
+SELECT job FROM works_on
+GROUP BY job
+
+SELECT SUM(budget) AS sum_budget
+FROM project
+
+SELECT * 
+FROM employee
+WHERE emp_no = 
+		(SELECT MIN(emp_no)
+		 FROM employee);
+
+SELECT *
+FROM employee
+WHERE emp_no = 
+	(SELECT emp_no --, *
+	 FROM works_on
+	 WHERE enter_date = 
+		(SELECT MAX(enter_date)
+		 FROM works_on
+		 WHERE job = 'Manager'));
+
+SELECT project_no, COUNT(DISTINCT job) AS job_count
+FROM works_on
+GROUP BY project_no;
+
+SELECT job, COUNT(*) AS count_job
+FROM works_on
+GROUP BY (job);
+
+SELECT project_no, COUNT(*)
+FROM works_on
+GROUP BY (project_no)
+HAVING COUNT(*) < 4
