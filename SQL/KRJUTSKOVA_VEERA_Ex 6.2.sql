@@ -47,4 +47,21 @@ GROUP BY CustomerID
 HAVING COUNT(*) > 15
 ORDER BY How_much DESC
 
---8 === Из каких стран и из каких городов у нас 2 и более клиентовSELECT ShipCountry, ShipCity, COUNT(*) AS CustomersFROM OrdersGROUP BY ShipCountry, ShipCityHAVING COUNT(*) >= 2ORDER BY Customers--9 === Сколько разновидностей товаров в каждой категорииSELECT CategoryID, COUNT(*) AS How_muchFROM ProductsGROUP BY CategoryID--10 === На какую сумму товаров каждой категории у нас на складе (учитывайте стоимость и количество товара на складе)SELECT CategoryID, SUM(UnitsInStock*UnitPrice) AS PriceFROM ProductsGROUP BY CategoryID
+--8 === Из каких стран и из каких городов у нас 2 и более клиентов
+SELECT ShipCountry, ShipCity, COUNT(*) AS Customers
+FROM Orders
+GROUP BY ShipCountry, ShipCity
+HAVING COUNT(*) >= 2
+ORDER BY Customers
+
+--9 === Сколько разновидностей товаров в каждой категории
+SELECT CategoryID, COUNT(*) AS How_much
+FROM Products
+GROUP BY CategoryID
+
+--10 === На какую сумму товаров каждой категории у нас на складе (учитывайте стоимость и количество товара на складе)
+SELECT CategoryID, SUM(UnitsInStock*UnitPrice) AS Price
+FROM Products
+GROUP BY CategoryID
+
+

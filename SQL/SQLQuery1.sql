@@ -141,3 +141,48 @@ SELECT project_no, COUNT(*)
 FROM works_on
 GROUP BY (project_no)
 HAVING COUNT(*) < 4
+
+
+
+SELECT *
+FROM employee
+
+SELECT *
+FROM employee
+WHERE dept_no IN
+			(SELECT dept_no
+			FROM department
+			WHERE location = 'Dallas');
+
+SELECT * FROM employee
+WHERE emp_no IN
+			(SELECT emp_no FROM works_on
+			WHERE project_no = 
+						(SELECT project_no FROM project
+						WHERE project_name = 'Gemini'))
+
+
+SELECT emp_no, project_no, job
+FROM works_on
+WHERE enter_date > ANY
+				(SELECT enter_date
+				FROM works_on);
+
+SELECT* FROM works_on
+WHERE enter_date > ANY
+			(SELECT enter_date FROM works_on
+			WHERE YEAR(enter_date) > 2006);
+
+
+--ALL
+SELECT * FROM works_on
+WHERE project_no != ALL
+			(SELECT project_no FROM project);
+
+
+SELECT emp_1name
+FROM employee
+WHERE 'p3' IN
+		(SELECT project_no
+		FROM works_on
+		WHERE works_on.emp_no = employee.emp_no);
