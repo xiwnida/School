@@ -31,6 +31,19 @@ class controllerBooks {
         include_once 'view/booksList.php';
     }
     
+    public static function detailBook($title){
+        //получить информацию об одной книге
+        //$test - либо найдет информацию, либо не найдет
+        $test = modelBooks::getBookOne($title);
+        //.......more
+        if($test[0]==true){
+            $book = $test[1];//найденая книга
+            include_once 'view/bookOne.php';
+        }else{
+            include_once 'view/error404.php';
+        }
+    }
+    
 }//end class!!!
 
 

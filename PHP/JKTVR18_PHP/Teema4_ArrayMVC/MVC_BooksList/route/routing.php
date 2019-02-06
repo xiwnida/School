@@ -21,8 +21,36 @@ if($way == '' || $way == 'index.php' || $way == 'index'){
 }
 elseif($way == 'Books'){
     $response = controllerBooks::booksList();
+    
 }
+//--------detail book
+elseif($way=='detail'){
+    if(isset($_GET['title'])){
+        //----читаем название и выводим информацию об одной книге
+        $title=$_GET['title'];//название книги
+        $response = controllerBooks::detailBook($title);
+    }else{
+        $response = controllerBooks::error404();
+    }
+}
+
+//====================countries and flags
+
+elseif($way == 'Countries'){
+    $response = controllerCountry::startSite();
+}
+
+//--------------country One filter
+elseif($way == 'Country'){
+    if(isset($_GET['name'])){
+        $name = $_GET['name'];
+        $response = controllerCountry::country($name);
+    }else{
+        $response = controllerBooks::error404();
+    }//if
+}//elseif
 
 else{
     $response = controllerBooks::error404();
 }
+
