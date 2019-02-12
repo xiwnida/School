@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Анкета</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Анкета посетителя ресторана</h1>
+	<form>
+
+		<center><div class="header""><h2>Контактные данные</h2></div></center>
+		<div class="content" style="text-align: right;">
+
+			<label class="text" >Имя</label><input class="line" style = "margin-right: 100px; width: 60%;" type="text" name="fname" size="30" maxlength="30" placeholder="Введите ваше имя" required></p>
+
+			<label class="text">Фамилия</label><input class="line" style = "margin-right: 100px; width: 60%;" type="text" name="lname" size="30" maxlength="30" placeholder="Введите вашу фамилию" required></p>
+ 
+			<label class="text">E-mail</label><input class="line" style = "margin-right: 100px; width: 60%;" type="e-mail" name="mail" size="30" maxlength="30" placeholder="Введите ваш e-mail" required></p>
+
+			<label class="text">Телефон</label><input class="line" style = "margin-right: 100px; width: 60%;" type="text" name="pfone" size="30" maxlength="10" placeholder="Введите ваш телефон" required></p>
+		</div>
+
+		<center><div class="header"><h2>Персональная информация</h2></div></center>
+		<div class="content">
+
+			<label class="text">Ваш пол:</label><label><input type="radio" name="sex" checked value="female">Женский</label>
+			<label><input type="radio" name="sex" value="male">Мужской</p></label>
+
+			<label class="text">Возраст</label><input class="line" type="number" name="age" value="1" min="1" max="200" required></p>
+
+			<label class="text">Любимый цвет</label>
+			<select required>
+				<option value="" hidden="">Выбери цвет</option>
+				<option value="blue">Синий</option>
+				<option value="red">Красный</option>
+				<option value="green">Зеленый</option>
+				<option value="yellow">Желтый</option>
+				<option value="purple">Фиолетовый</option>
+			</select><p>
+
+			<label class="text">Любимая кухня</label>
+			<select required>
+				<option value="" hidden="">Выбери</option>
+				<option value="euro">Европейская</option>
+				<option value="rus">Русская</option>
+				<option value="asia">Азиатская</option>
+				<option value="more">Другое</option>
+			</select><p>
+
+			<label class="text">Какие блюда вы хотели бы видеть в меню?</label></p>
+			<textarea placeholder="Напишите свои предложения" cols="60" rows="6"></textarea>
+		</div>
+
+		<center><div class="header"><h2>Оценка нашего заведения</h2></div></center>
+		<div class="content">
+
+			<label class="text">Дата посещения</label><input class="line" type="date" name="date_visit"></p>
+
+			<label class="text">Почему вы выбрали наше заведение?</label><p>
+			<label><input type="radio" name="choice" checked value="choice_hovework">Недалеко от дома/работы</label></br>
+			<label><input type="radio" name="choice" value="choice_reclam">Увидел рекламу</label></br>
+			<label><input type="radio" name="choice" value="choice_advice">Посоветовали</label></br>
+			<label><input type="radio" name="choice" value="choice_good">Соотношение цены и качества</label><p>
+
+			<label class="text">Как вы оцениваете наше заведение (по 5-ти бальной системе)</label><br>
+			<input type="range" min="0" max="5" step="1" value="0" name="5-balls"> <p>
+
+			<label class="text">Как вы оцениваете наше заведение (по 10-ти бальной системе)</label><br>
+			<input type="range" min="0" max="10" step="1" value="0" name="10-balls"> <p>
+
+			<label class="text">Будете ли вы рекомендовать наше заведение знакомым?</label><br>
+
+			<label><input type="radio" name="recomend" checked value="rec_yes">Да</label></br>
+			<label><input type="radio" name="recomend" value="rec_no">Нет</label>
+		</div>
+
+		<center><div class="header"><h2>Дата заполнения анкеты</h2></div></center>
+		<div class="content">
+			<label class="text">Выберите дату</label><input class="line" type="date" name="date_anket"></p>
+		</div>
+		<div>
+			<center>
+				<input class="button" type="submit" name="ok" value="Отправить">
+				<input class="button" type="reset" name="reset" value="Отменить">
+			</center>
+		</div>
+	</form>
+
+</body>
+</html>

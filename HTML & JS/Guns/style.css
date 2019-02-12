@@ -1,15 +1,18 @@
 body{
-	background: lightgreen;
+	background: linear-gradient(to top, YellowGreen, PaleGreen);
 }
 
 .header h1{
-	text-shadow: 2px 2px 2px green, 5px 5px 2px black;
+	text-shadow: 2px 2px 2px IndianRed, 4px 4px 2px GreenYellow, 6px 6px 2px Crimson, 
+	8px 8px 2px DarkRed, 10px 10px 2px DarkGreen, 12px 12px 2px Aqua, 
+	14px 14px 2px Orange, 16px 16px 2px Coral, 18px 18px 2px MediumSeaGreen, 
+	20px 20px 2px LightYellow, 22px 22px 2px DarkOliveGreen, 24px 24px 2px black;
 	color: red;
 	font-size: 80px;
 	text-align: center;
 }
 .header{
-	background: darkKhaki;
+	background: radial-gradient(at top,  AntiqueWhite, darkKhaki );
 	border-radius: 10px 20px;
 	border: 10px inset DarkRed;
 	width: 44%;
@@ -24,6 +27,7 @@ body{
 	margin-bottom: 40px;
 	margin-left: 15px;
 	border: 2px solid black;
+	box-shadow: 5px 5px 2px darkRed;
 }
 
 .description{
@@ -38,13 +42,13 @@ body{
 }
 
 .content{
-	background: gold;
-	border: 10px outset blue;
+	background: linear-gradient(to top, Khaki, BlanchedAlmond);
+	border: 10px outset RoyalBlue;
 	margin-top: 40px;
 	width: 70%;
 	margin-left: 15%;
 	border-radius: 0 0 20px 20px;
-	box-shadow: 3px 3px 3px 0 blue;
+	box-shadow: 3px 3px 3px 0 MidnightBlue;
 	overflow: hidden;
 	padding: 15px;
 }
@@ -90,4 +94,60 @@ h2{
 	width: 200px;
 	height: 200px;
 	border: 3px solid black;
+}
+
+a {
+	font-size: 26px;
+    color: #969696;
+    text-shadow: 1px 1px black;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+}
+a:hover {
+    color: #F54318;
+}
+footer{
+	height: 60px;
+	background: white;
+	border: 2px outset black;
+	margin-top: 40px;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 3px 3px 3px 0 red;
+	overflow: hidden;
+	padding: 15px;
+}
+footer .year{
+	font-size: 40px;
+	margin-right: 50px;
+	text-shadow: 2px 2px 2px IndianRed, 12px 12px 2px GreenYellow, 22px 22px 2px Crimson, 
+	32px 32px 2px DarkRed;
+}
+
+.gif {
+	height: 281px;
+	border: 2px outset black;
+}
+
+.mirror1{
+	width: 300px;
+	height:200px;
+	margin-bottom: 200px;
+	margin-top: 90px;
+	margin-left: 100px;
+	float: left;
+	transform: rotate(45deg);
+	-webkit-box-reflect:below -1px 
+	-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, transparent) , to(rgba(250, 250, 250, 0.5)));
+}
+
+.mirror2{
+	width: 300px;
+	height:200px;
+	float: right;
+	margin-bottom: 200px;
+	margin-top: 90px;
+	margin-right: 100px;
+	transform: rotate(-45deg);
+	-webkit-box-reflect:below -1px 
+	-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, transparent) , to(rgba(250, 250, 250, 0.5)));
 }
