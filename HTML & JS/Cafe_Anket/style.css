@@ -3,11 +3,11 @@ body {
 }
 
 .content {
-	margin-left: 30%;
+	margin-left: 22%;
 	border: 3px solid black;
 	border-radius: 20px 20px 20px 20px;
 	background-color: white;
-	width: 35%;
+	width: 50%;
 	margin-bottom: 50px;
 	padding: 50px 30px 30px 60px;
 }
@@ -68,4 +68,16 @@ textarea {
     resize: none;
     font-family: 'Quando', Helvetica, Arial, sans-serif;
     color:#937c7c;
-	}
+}
+
+form {
+    background-image: url(bg.jpg);
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.title{
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+}
