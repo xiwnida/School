@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="content">
+	<form>
+		<h1>Регистрация подписчика</h1>
+		<label>Как вас зовут?</label>
+		<input type="text" name="fname" size="30" maxlength="30"required></p>
+		<label>Страна проживания:</label>
+		<input type="text" name="fname" size="30" maxlength="30" required></p>
+		<label>Электронная почта:</label>
+		<input class="reverse"type="e-mail" name="mail" size="30" maxlength="30" required></p>
+		<label>Ваш пол:</label>
+		<label><input type="radio" name="sex" checked value="female">Женский</label>
+		<label><input type="radio" name="sex" checked value="male">Мужской</label><p>
+		<label>Укажите ваш возраст:</label><input class="age" type="number" name="age" value="1" min="1" max="200" required></p>
+		<label>Ваш уровень владения компьютером:</label><br>
+		<label><input type="radio" name="choice" value="lvl_noob">Начальный</label><br>
+		<label><input type="radio" name="choice" value="lvl_middle">Средний</label><br>
+		<label><input type="radio" name="choice" value="lvl_profy">Профессиональный</label><br>
+		<label><input type="radio" name="choice" value="lvl_cant">Не владею</label><p>
+		<label>Откуда о нас узнали?</label>
+		<select required>
+				<option value="" hidden="">Выбери</option>
+				<option value="internet">Интернет</option>
+				<option value="SMI">Печатные издания</option>
+				<option value="people">Посоветовали знакомые</option>
+				<option value="television">Телевидение</option>
+			</select><p>
+		<label>Дополнительная информация</label><p>
+		<textarea cols="60" rows="6" name="moreinfo"></textarea><p>
+		<label>Дата подписки</label><input class="reverse" type="date" name="date_anket"></p>
+		<center>
+				<input class="button" type="submit" name="ok" value="Подписаться">
+				<input class="button" type="reset" name="reset" value="Очистить">
+		</center>
+	</form>
+	</div>
+
+</body>
+</html>

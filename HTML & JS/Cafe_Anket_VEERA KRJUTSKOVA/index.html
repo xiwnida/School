@@ -5,8 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="title"><h1>Анкета посетителя ресторана</h1></div>
 	<form>
+		<p>
+	<div class="title"><h1>Анкета посетителя ресторана</h1></div>
+	
 
 		<center><div class="header""><h2>Контактные данные</h2></div></center>
 		<div class="content" style="text-align: right;">
@@ -15,7 +17,7 @@
 
 			<label class="text">Фамилия</label><input class="line" style = "margin-right: 100px; width: 60%;" type="text" name="lname" size="30" maxlength="30" placeholder="Введите вашу фамилию" required></p>
  
-			<label class="text">E-mail</label><input class="line" style = "margin-right: 100px; width: 60%;" type="e-mail" name="mail" size="30" maxlength="30" placeholder="Введите ваш e-mail" required></p>
+			<label class="text">E-mail</label><input class="line2" style = "margin-right: 100px; width: 60%;" type="e-mail" name="mail" size="30" maxlength="30" placeholder="Введите ваш e-mail" required></p>
 
 			<label class="text">Телефон</label><input class="line" style = "margin-right: 100px; width: 60%;" type="text" name="pfone" size="30" maxlength="10" placeholder="Введите ваш телефон" required></p>
 		</div>
@@ -29,14 +31,7 @@
 			<label class="text">Возраст</label><input class="line" type="number" name="age" value="1" min="1" max="200" required></p>
 
 			<label class="text">Любимый цвет</label>
-			<select required>
-				<option value="" hidden="">Выбери цвет</option>
-				<option value="blue">Синий</option>
-				<option value="red">Красный</option>
-				<option value="green">Зеленый</option>
-				<option value="yellow">Желтый</option>
-				<option value="purple">Фиолетовый</option>
-			</select><p>
+			<input type="color"/><br>
 
 			<label class="text">Любимая кухня</label>
 			<select required>
@@ -48,7 +43,7 @@
 			</select><p>
 
 			<label class="text">Какие блюда вы хотели бы видеть в меню?</label></p>
-			<textarea placeholder="Напишите свои предложения" cols="60" rows="6"></textarea>
+			<textarea placeholder="Напишите свои предложения" cols="60" rows="6" name="yours"></textarea>
 		</div>
 
 		<center><div class="header"><h2>Оценка нашего заведения</h2></div></center>
@@ -76,7 +71,7 @@
 
 		<center><div class="header"><h2>Дата заполнения анкеты</h2></div></center>
 		<div class="content">
-			<label class="text">Выберите дату</label><input class="line" type="date" name="date_anket"></p>
+			<center><label class="text">Выберите дату</label><input class="line" type="date" name="date_anket"></p></center>
 		</div>
 		<div>
 			<center>

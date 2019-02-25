@@ -1,0 +1,126 @@
+
+body{
+	/*background-color: #A9F5A9;
+	background: radial-gradient(40% 50%, #A9F5A9, #58FA58)*/
+	background-image: url('Images/bg.jpg');
+}
+
+section{
+	margin: 50px 50px 50px 50px;
+	border: solid 3px;
+	width: 90%;
+	overflow: hidden;
+	background: radial-gradient(at top, #CEF6CE, #A9F5A9);
+	color: #0B610B;
+	border-radius: 20px;
+	width: 60%;
+	margin-left: 20%;
+	box-shadow: 0px 0px 20px 5px #0A2A0A;
+}
+
+section p{
+	padding: 30px 100px 0px 100px;
+	text-align: justify;
+}
+
+section h1{
+	text-align: center;
+	color: black;
+	font-size: 28px;
+	text-decoration: underline;
+}
+header{
+	height: 200px;
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 20px;
+	border: solid 3px #CEF6CE;
+	color: #CEF6CE;
+	background: radial-gradient(at top, #088A08, #0B610B);
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px 5px #0A2A0A;
+}
+hgroup{
+    text-align: center;
+    text-shadow: 5px 5px 2px #0A2A0A;
+   	font-size: 36px;
+
+}
+nav{
+	width: 40%;
+	border-radius: 20px;
+	font-size: 30px;
+	text-align: center;
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 30%;
+	background: rgba(254, 254, 254, 0.5);
+	box-shadow: 0px 0px 10px 5px #0A2A0A;
+}
+
+article h3{
+	text-align: right;
+	padding-top: 50px;
+	padding-right: 50px;
+}
+
+footer{
+	border:5px inset #CEF6CE;
+	text-align: center;
+	color: #CEF6CE;
+	background: radial-gradient(at top, #088A08, #0B610B);
+	border-radius: 30px;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 40px;
+	box-shadow: 0px 0px 10px 5px #0A2A0A;
+	text-shadow: 2px 2px 2px #0A2A0A;
+
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 15px 25px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.4s ease-in-out;
+  border-radius: 10px;
+  color: #0B3B0B;
+  box-shadow: inset 0 -5px 0 #0B3B0B;
+}
+ 
+.button:hover {
+  box-shadow: inset 0 -60px 0 #0B3B0B, 2px 2px 3px rgba(0,0,0,0.3);
+  color: #CEF6CE;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  font-size: 24px;
+  font-family: 'Fredoka One', cursive;
+  transition: .3s ease-in-out;
+  color: black;
+}
+
+.link:hover {
+	transform: scaleX(1.1);
+	color: #0B610B;
+}
+
+.back{
+	text-align: center;
+	width: 10%;
+	margin-left: 45%;
+	border-radius: 20px;
+	background: rgba(254, 254, 254, 0.5);
+	box-shadow: 0px 0px 10px 5px #0A2A0A;
+}

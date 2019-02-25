@@ -1,19 +1,15 @@
-body {
-	background-color: gold;
-}
-
 .content {
 	margin-left: 22%;
 	border: 3px solid black;
 	border-radius: 20px 20px 20px 20px;
-	background-color: white;
+	background-color: Moccasin;
 	width: 50%;
 	margin-bottom: 50px;
 	padding: 50px 30px 30px 60px;
 }
 
 .header h2{
-	background-color: lightblue;
+	background-color: PaleGoldenrod;
 	border: 3px solid black;
 	border-radius: 10px 10px 10px 10px;
 	width: 310px;
@@ -33,9 +29,9 @@ body {
 input {
     margin-bottom: 10px;
     padding: 5px;
-    background: #eef7f9;
+    background: LightYellow;
     border-radius: 4px;
-    border: 1px solid #cfdfe3;
+    border: 1px solid DarkKhaki;
     height: 20px;
     font-size: 16px;
     font-family: 'Quando', Helvetica, Arial, sans-serif;
@@ -45,24 +41,30 @@ input {
 	width: 25%;
 }
 
+.line2{
+    width: 25%;
+    background: Salmon;
+    border: 1px solid IndianRed;
+}
+
 .button {
     padding: 0 20px;
     height: 29px;
     margin-right: 15px;
     font-weight: bold;
     color: #666;
-    background: #deeef4;
-    border: 1px solid #bed6e3;
+    background: LightYellow;
+    border: 1px solid DarkKhaki;
     border-radius: 10px;
-	}
+}
 
 textarea {
     margin-bottom: 10px;
     padding: 5px;
-    background: #eef7f9;
+    background: LightYellow;
     border-radius: 4px;
     width: 90%;
-    border: 1px solid #cfdfe3;
+    border: 1px solid DarkKhaki;
     height: 180px;
     line-height: 20px;
     resize: none;
@@ -74,10 +76,14 @@ form {
     background-image: url(bg.jpg);
     width: 75%;
     margin-left: 12.5%;
+    border: 2px dashed black;
+    border-radius: 10px;
 }
 
 .title{
     text-align: center;
-    background-color: white;
+    background-color: PapayaWhip;
     border: 1px solid black;
+    width: 90%;
+    margin-left: 5%;
 }
