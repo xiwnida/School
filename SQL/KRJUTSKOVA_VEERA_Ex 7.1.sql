@@ -20,7 +20,8 @@ HAVING COUNT(dept_no) IN
 				GROUP BY dept_no
 				ORDER BY 1);
 
--- 6.19 В каких городах находятся отделы с минимальным количеством сотрудниковSELECT DISTINCT location
+-- 6.19 В каких городах находятся отделы с минимальным количеством сотрудников
+SELECT DISTINCT location
 FROM department
 WHERE dept_no IN
 			(SELECT dept_no
@@ -64,7 +65,19 @@ WHERE emp_no IN
 			FROM works_on
 			WHERE YEAR(enter_date) = 2008 AND (MONTH(enter_date) = 1 OR MONTH(enter_date) = 2));
 
--- 6.22 Получите полную информацию о сотрудниках, которые или имели должность клерк (clerk), или работают в отделе d3.SELECT *FROM employeeWHERE dept_no = 'd3' OR	emp_no IN			(SELECT emp_no			FROM works_on			WHERE job = 'clerk');-- 6.23 Объясните, почему следующий запрос неправильный.--Из вложенного запроса придет несколько значений, а так как в операторе WHERE стоит =, будет ошибка-- 6.23аSELECT project_name
+-- 6.22 Получите полную информацию о сотрудниках, которые или имели должность клерк (clerk), или работают в отделе d3.
+SELECT *
+FROM employee
+WHERE dept_no = 'd3' OR	emp_no IN
+			(SELECT emp_no
+			FROM works_on
+			WHERE job = 'clerk');
+
+-- 6.23 Объясните, почему следующий запрос неправильный.
+--Из вложенного запроса придет несколько значений, а так как в операторе WHERE стоит =, будет ошибка
+
+-- 6.23а
+SELECT project_name
 FROM project
 WHERE project_no IN
 			(SELECT project_no FROM works_on WHERE Job = 'Clerk')

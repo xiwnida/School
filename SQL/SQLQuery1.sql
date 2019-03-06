@@ -186,3 +186,31 @@ WHERE 'p3' IN
 		(SELECT project_no
 		FROM works_on
 		WHERE works_on.emp_no = employee.emp_no);
+
+
+CREATE TABLE bonus
+(pr_no CHAR(4), bonus SMALLINT DEFAULT 100);
+
+INSERT INTO bonus (pr_no) VALUES ('p1');
+
+SELECT * FROM bonus
+
+SELECT * FROM project
+
+MERGE INTO bonus B
+	USING (SELECT project_no, budget
+		   FROM project) E
+		   ON (B.pr_no = E.project_no)
+	WHEN MATCHED THEN
+		UPDATE SET B.bonus = E.budget * 0.1
+	WHEN NOT MATCHED THEN
+		INSERT (pr_no, bonus)
+			VALUES (E.project_no, E.budget * 0.05);
+
+DECLARE @del_table TABLE (emp_no INT, emp_1name CHAR(20))
+
+DELETE employee
+OUTPUT DELETED.emp_no, DELETED.emp_1name INTO @del_table
+WHERE emp_no > 15000
+
+SELECT * FROM @del_table
