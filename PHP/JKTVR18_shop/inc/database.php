@@ -1,71 +1,66 @@
 <?php
 
 class database {
-    
     private $conn;
     private $host;
     private $user;
     private $password;
-    private $daseName;
+    private $baseName;
     
     function __construct() {
-        $this->conn = false;
-        $this->host = 'localhost';
-        $this->user = 'root';
-        $this->password = '';
-        $this->daseName = 'jktvr18_shop';
+        $this->conn=false;
+        $this->host='localhost';
+        $this->user='root';
+        $this->password='';
+        $this->baseName='jktvr18_shop';
         $this->connect();
     }
-    
     function __destruct() {
         $this->disconnect();
     }
-    
-//---------------- дальше пользовательские функции
-    
-    function connect() {
-        try{
-            $this->conn = new PDO('mysql:host ='.$this->host.'; dbname = '.$this->baseName, $this->user, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8'));
-        } 
-        catch (Exception $ex) {
-            die("Connection Failed: ".$ex->getMessage());
-        }
-        
-        return $this->conn;
-    }//connect
-    
-    function disconnect() {
-        if ($this->conn){
-            $this->conn = null;
+  //----------------------пользовательские функции
+  function connect(){
+      try{
+
+//$this->conn = new PDO('mysgl:host='.$this->host.';dbname='.$this->baseName, $this->user, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));          
+$this->conn = new PDO('mysql:host='.$this->host.';dbname='.$this->baseName, $this->user, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));             
+ } catch (Exception $ex) {
+die("Connected failed: ".$ex->getMessage());
+      }
+      return $this->conn;
+  }//connect
+  
+    function disconnect(){
+        if($this->conn){
+            $this->conn=null;
         }
     }
+   //-----------------для запросов SELECT(2), actions
     
-//--------------Методы действия для запросов. SELLECT(2), action
+    //-  select - 1 запись из таблицы
+    function getOne($query){
+        $stmt= $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response=$stmt->fetch();
+        return $response;
+    }
     
-    //-----SELLECT - 1 запись из таблицы
-    function getOne($query) {
-        $stmt = $this->conn->prepare($query);
-        $stmt -> execute();
-        $stmt -> setFetchMode(PDO::FETCH_ASSOC);
-        $response = $stmt->fetch();
+        //-  select - массив данных из таблицы
+    function getAll($query){
+        $stmt= $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response=$stmt->fetchAll();//!! foreach
+        return $response;
+    }
+    //---------------actions INSERT, UPDATE DELETE
+    function executeRun($query){
         
+        $response= $this->conn->exec($query);
         return $response;
     }
     
-    //----- SELECT - массив данныз из таблицы
-    function getAll($query) {
-        $stmt = $this->conn->prepare($query);
-        $stmt -> execute();
-        $stmt -> setFetchMode(PDO::FETCH_ASSOC);
-        $response = $stmt->fetchAll(); //--После используется foreach обязательно.
-        
-        return $response;
-    }
     
-    //-----Actions INSERT, UPDATE, DELITE
-    function executeRun($query) {
-        $response = $this->conn->exic($query);
-        return $response;
-    }
     
 }//class
