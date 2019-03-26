@@ -21,13 +21,13 @@ section{
 section p{
 	padding: 30px 100px 0px 100px;
 	text-align: justify;
-	font-size: 22px;
+	font-size: 1.5em;
 }
 
 section h1{
 	text-align: center;
 	color: black;
-	font-size: 28px;
+	font-size: 2em;
 	text-decoration: underline;
 }
 header{
