@@ -1,47 +1,70 @@
 <?php
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of ProductController
+ *
+ * @author Reshetnikov
+ */
 class ProductController {
-    //список категорий для меню
-    
-    public static function CategoryList() {
-        $categoryList = ProductModel::GetCategoryList();
+    // список категорий для меню
+    public static function CategoryList(){
+        $CategoryList = ProductModel::getCategoryList();
         include_once 'view/CategoryList.php';
-        return $categoryMenu;
-    }//CategoryList
-    
-    public static function TypeList() {
-        $typeList = ProductModel::GetTypeList();
+        return $CategoryMenu;
+    } // public static function CategoryList
+      // --- type
+    public static function TypeList(){
+        $typeList = ProductModel::getTypeList();
         include_once 'view/TypeList.php';
-        return $typeMenu;
-    }//CategoryList
+        return $TypeMenu;
+    } // public static function TypeList    
     
-    //-----------Start site
     
-    public static function StartSite() {
-        $categoryMenu = ProductController::CategoryList();//menu по категориям
-        $typeMenu = ProductController::TypeList();//menu по категориям
+    // --- startSite
+    
+    public static function startSite(){
+        $CategoryMenu = ProductController::CategoryList(); // меню по категориям
+        $TypeMenu = ProductController::TypeList();
+        //products - получить данные
+        $productList = ProductModel::getProductList();
         
-        $productList = ProductModel::GetProductList();;
-        include_once 'view/Product.php';
-    }
+        include_once 'view/product.php';
+    } // public static function startSite
     
-    //-------------product category
+    // --- ProductCategory
     
     public static function ProductCategory($id){
-        $categoryMenu = ProductController::CategoryList();//menu по категориям
-        $typeMenu = ProductController::TypeList();//menu по категориям
-        //model
-        $productList = ProductModel::GetProductCategory($id);
-        include_once 'view/Product.php';
+        $CategoryMenu = ProductController::CategoryList(); // меню по категориям
+        $TypeMenu = ProductController::TypeList();
+        // model id - номер категории товаров
+        $productList = ProductModel::getProductCategory($id);
+        include_once 'view/product.php';
     }
     
-    //-------------product category
+    // --- ProductType
     
     public static function ProductType($id){
-        $categoryMenu = ProductController::CategoryList();//menu по категориям
-        $typeMenu = ProductController::TypeList();//menu по категориям
-        //model
-        $productList = ProductModel::GetProductType($id);
-        include_once 'view/Product.php';
+        $CategoryMenu = ProductController::CategoryList(); // меню по категориям
+        $TypeMenu = ProductController::TypeList(); // type menu
+        // model id - номер категории товаров
+        $productList = ProductModel::getProductType($id);
+        include_once 'view/product.php';
     }
-}//class
+    
+    // --- ProductDetail
+    
+    public static function ProductDetail($id){
+        $CategoryMenu = ProductController::CategoryList(); // меню по категориям
+        $TypeMenu = ProductController::TypeList(); //type menu
+        // model - один товар
+        $product = ProductModel::getProductDetail($id);
+        include_once 'view/productDetail.php';
+     }
+     
+} // class ProductController

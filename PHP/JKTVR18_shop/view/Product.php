@@ -1,8 +1,10 @@
 <?php
 
 ob_start();
-if (count($productList)>0){
-echo '<center><p>Всего товаров: '.count($productList).'</p></center>';
+
+?>
+<?php
+if(count($productList)>0){
 foreach ($productList as $product) {
 echo '<div class="col-sm-4">
     <div class="product-image-wrapper">
@@ -13,15 +15,18 @@ echo '<div class="col-sm-4">
                 <p>'.$product['nameProduct'].'</p>
                 <a href="detail?id='.$product['idProduct'].'" class="btn btn-default cart"><i class="fa fa-expand"></i> Detail</a>
             </div>
-
         </div>
-
     </div>
 </div>';
+}// foreach
+echo '<div style="clear:both"></div>';
+echo '<p>Всего товаров по категории: '.count($productList).'</p>';
+} // if
+else{
+    echo '<p>No products by category</p>';
 }
-}else{
-    echo '<center><p>Асортимент отсутствует</p></center>';
-}
+?>
 
+<?php
 $content = ob_get_clean();
 include_once 'view/templates/layout.php';

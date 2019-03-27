@@ -37,30 +37,38 @@ die("Connected failed: ".$ex->getMessage());
     }
    //-----------------для запросов SELECT(2), actions
     
-    //-  select - 1 запись из таблицы
+    //--- select - 1 запись из таблицы
+    
     function getOne($query){
-        $stmt= $this->conn->prepare($query);
+        $stmt=$this->conn->prepare($query);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $response=$stmt->fetch();
         return $response;
     }
     
-        //-  select - массив данных из таблицы
+    //--- select - массив данных из таблицы
+    
     function getAll($query){
-        $stmt= $this->conn->prepare($query);
+        $stmt=$this->conn->prepare($query);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $response=$stmt->fetchAll();//!! foreach
         return $response;
     }
-    //---------------actions INSERT, UPDATE DELETE
+    //--- actions INSERT, UPDATE DELETE
+    
     function executeRun($query){
         
-        $response= $this->conn->exec($query);
+        $response=$this->conn->exec($query);
         return $response;
     }
     
-    
+    // --- получение последнего ID после вставки (INSERT)
+    function getLastId(){
+        
+        $lastId=$this->conn->LastInsertId();
+        return $lastId;
+    }
     
 }//class

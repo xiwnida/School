@@ -1,47 +1,61 @@
 <?php
 
 class ProductModel {
-    //Список категорий
+    // список категорий
+    public static function getCategoryList (){
+        $sql = 'SELECT * FROM `category` ORDER BY `category`.`nameCategory` ASC';
+        $db = new database(); // соединение с базой данных
+        $rows = $db -> getAll($sql);
+        return $rows;
+    } // public static function getCategoryList
     
-    public static function GetCategoryList() {
-        $sql = 'SELECT * FROM `category` ORDER BY `nameCategory` ASC';
-        $db = new database();//соединение с базой данных
-        $rows = $db->getAll($sql);
-        
+    // список типов
+    public static function getTypeList (){
+        $sql = 'SELECT * FROM `type` ORDER BY `type`.`nameType` ASC';
+        $db = new database(); // соединение с базой данных
+        $rows = $db -> getAll($sql);
         return $rows;
     }
     
-    public static function GetTypeList() {
-        $sql = 'SELECT * FROM `type` ORDER BY `nameType` ASC';
-        $db = new database();//соединение с базой данных
-        $rows = $db->getAll($sql);
-        
+    // список продуктов
+    public static function getProductList(){
+        $sql = 'SELECT * FROM `product` ORDER BY `product`.`nameProduct` ASC';
+        $db = new database(); // соединение с базой данных
+        $rows = $db -> getAll($sql);
         return $rows;
     }
     
-    public static function GetProductList() {
-        $sql = 'SELECT * FROM `product` ORDER BY `nameProduct` ASC';
-        $db = new database();//соединение с базой данных
-        $rows = $db->getAll($sql);
-        
-        return $rows;
-    }
-    
-    //by category
-    public static function GetProductCategory($id) {
+    // --- список продуктов по категории
+    public static function getProductCategory($id){
         $sql = 'SELECT * FROM `product` WHERE `idCategory`='.$id;
-        $db = new database();//соединение с базой данных
-        $rows = $db->getAll($sql);
-        
+        $db = new database(); // соединение с базой данных
+        $rows = $db -> getAll($sql);
         return $rows;
     }
     
-    //by type
-    public static function GetProductType($id) {
+    // --- список продуктов по типам
+    public static function getProductType($id){
         $sql = 'SELECT * FROM `product` WHERE `idType`='.$id;
-        $db = new database();//соединение с базой данных
-        $rows = $db->getAll($sql);
-        
+        $db = new database(); // соединение с базой данных
+        $rows = $db -> getAll($sql);
         return $rows;
     }
-}
+    
+    // --- one row
+    public static function getProductDetail($id){
+        $sql = 'SELECT * FROM `product` WHERE `idProduct`='.$id;
+        $db = new database(); // соединение с базой данных
+        $row = $db -> getOne($sql);
+        return $row;
+    }
+    
+    //-----------product by ids
+    public static function getProductsByIds($productIds) {
+        $idsString = implode(',', $productIds); //5,2   - $productIds  - array [0] =>5, [1] =>2
+        $sql = "SELECT * FROM `product` WHERE `idProduct` IN($idsString)";
+        $db = new database();
+        $rows = $db->getAll($sql);
+        return $rows;
+    }
+    
+} // class ProductModel
