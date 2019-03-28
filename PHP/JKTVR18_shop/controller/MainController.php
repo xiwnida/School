@@ -34,6 +34,10 @@ class MainController {
     
     public static function loginResult() {
         $result = MainModel::setLoginResult();
-        include_once 'view/LoginResult.php';
-    }
+        if(isset($result) && $result[0] == true && isset($_SESSION['products'])) {
+            include_once 'view/ConfirmPayment.php';
+        }else{
+            include_once 'view/LoginResult.php';
+        }//else
+    }//function
 }//class MainController

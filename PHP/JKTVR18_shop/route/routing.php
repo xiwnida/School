@@ -54,3 +54,25 @@ elseif ($path == 'cartClear') {
     CartController::actionCartClear();
     $response = CartController::cartView();
 }
+
+elseif ($path == 'cartDelete' && isset($_GET['id'])) {
+    CartController::actionDelete($_GET['id']);
+    header('Location: cart');
+    //$response = CartController::cartView();
+}
+
+//----------payment
+elseif ($path == 'cartCheckout') {
+    
+    if(!isset($_SESSION['userId'])){
+        //Если не залогинен и не зарегистрирован, то шуруй на форму регистрации
+    //$response = MainController::LoginSignIn();
+        header('Location: loginForm');
+    }else{
+        $response = CartController::Payment();
+    }
+}
+
+elseif ($path == 'cartPayment') {
+    $response = CartController::actionCheckout();
+}

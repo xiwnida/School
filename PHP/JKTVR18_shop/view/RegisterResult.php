@@ -10,6 +10,14 @@ echo'<section id="form">
 if (isset($result)) {
     if ($result[0] == true) {
         echo'<p>User ' . $_SESSION['nameUser'] . ' registered successfully.</p>';
+        if(isset($_SESSION['products'])){
+            //----управление корзиной
+            echo '<div style="clear:both;"></div>
+    <p><a class="btn btn-default checkout" href="cart">
+    <i class="fa fa-shopping-cart"></i>
+    Управление корзиной
+    </a></p>	';
+        }
     }
     if ($result[0] == false) {
         echo '<p>Registration error<br>' . $result[1] . '</p>';

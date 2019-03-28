@@ -19,13 +19,31 @@ class CartController {
             //-------Totalprice!!!
             $totalPrice = CartModel::getTotalPrice($products);
             
-           
+        if(count($products) == 0){
+            unset($_SESSION['products']);
+            unset($productsInCart);
         }
+        }
+        
         include_once 'view/viewCart.php';
     }
     
     public static function actionCartClear() {
         CartModel::clearCart();
         return;
+    }
+    
+    public static function actionDelete($id) {
+        CartModel::deleteProduct($id);
+        return;
+    }
+    
+    public static function payment() {
+        include_once 'view/confirmPayment.php';
+    }
+    //------check confirm order
+    public static function actionCheckout() {
+        $result = CartModel::getPayment();
+        include_once 'view/confirmOrder.php';
     }
 }

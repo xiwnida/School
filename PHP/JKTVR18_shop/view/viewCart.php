@@ -49,7 +49,7 @@ if(isset($productsInCart)){
                     <p class="cart_total_price"><?php echo $productsInCart[$product['idProduct']]*$product['price']; ?>&euro;</p>
             </td>
             <td class="cart_delete">
-                    <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                    <a class="cart_quantity_delete" href="cartDelete?id=<?php echo $product['idProduct']; ?>"><i class="fa fa-times"></i></a>
             </td>
     </tr>
     <?php
@@ -70,8 +70,8 @@ if(isset($productsInCart)){
                 </tbody>
         </table>
         <div style="text-align:right; margin-right:50px;">
-        <a class="btn btn-default cart checkout" href="
-        "><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
+        <a class="btn btn-default cart checkout" href="cartCheckout">
+            <i class="fa fa-shopping-cart"></i> Оформить заказ</a>
         </div>
 			</div>
 

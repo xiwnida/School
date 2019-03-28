@@ -45,4 +45,55 @@ class CartModel {
             unset($_SESSION['products']);
         }
     }
+    
+    public static function deleteProduct($id) {
+        $productInCart = array();
+        if(isset($_SESSION['products'])){
+            $productInCart = $_SESSION['products'];
+        }
+        if(isset($productInCart[$id])){
+            $productInCart[$id]--;
+            if($productInCart[$id] == 0){
+                unset($productInCart[$id]);
+            }
+        }
+        $_SESSION['products'] = $productsInCart;
+        return;
+    }
+    
+    public static function getPayment() {
+        $result = false;
+        if(isset($_POST['payment']) &&isset($_POST['check'])) {
+            $productsInCart = array();
+            if(isset($_SESSION['products'])){
+                $productsInCart = $_SESSION['products'];
+            }else{
+                return $result;
+            }
+            //-------list product
+            $text = '';
+            foreach ($productsInCart as $key=>$quantity) {
+                $text.=','.$key.':'.$quantity;
+            }
+            $text=trim($text,','); //Убирает ненужные символы. Тут - первую запятую
+            //-----totalPrice
+            $productIds = array_keys($productsInCart);
+            $products = ProductModel::getProductsByIds($productIds);
+            $totalPrice = CartModel::getTotalPrice($products);//!!!!!!
+            /////----------
+            $userID = $_SESSION['userId'];
+            $date = date('Y-m-d');//!!!!!!!!
+            //------запрос, соединение, запись
+            $sql = "INSERT INTO `productorder` (`idOrder`, `idUser`, `listProduct`, `date`, `totalSumma`, `status`)
+                    VALUES (NULL, '$userID', '$text', '$date', '$totalPrice', '1')";
+            $db = new database();
+            $answer = $db->executeRun($sql);
+            if($answer){
+                CartModel::clearCart();
+                $result=true;
+            }
+            }
+        
+        return $result;
+    }
 } // class CartModel
