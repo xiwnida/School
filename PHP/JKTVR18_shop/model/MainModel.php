@@ -41,6 +41,7 @@ class MainModel {
                     $_SESSION['sessionId'] = session_id();
                     $_SESSION['nameUser'] = $nameUser;
                     $_SESSION['userId'] = $database->getLastId();
+                    $_SESSION['status'] = 0;//0-client 1-admin
                     $result = array(true);
                 } else {
                     //not register
@@ -58,6 +59,7 @@ class MainModel {
         unset($_SESSION['sessionId']);
         unset($_SESSION['nameUser']);
         unset($_SESSION['userId']);
+        unset($_SESSION['status']);
         return;
     } // public static function Logout
     
@@ -81,6 +83,7 @@ public static function setLoginResult() {
                 $_SESSION['sessionId']=session_id();
                 $_SESSION['nameUser']=$item['nameUser'];
                 $_SESSION['userId']=$item['idUser'];
+                $_SESSION['status'] = $item['status'];//0-client 1-admin
                 $result = array(true);        
                 };
             }
