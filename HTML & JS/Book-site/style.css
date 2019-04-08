@@ -58,12 +58,10 @@ nav a {
 
 .navi:hover {
   color: #F54318;
-  border-bottom: 2px solid #F54318;
-  box-shadow: 0 1px 0 white, 0 2px 0 #969696;
 }
 
 .free_space{
-  margin-top: 5em;
+  margin-top: 5%;
   overflow: hidden;
 }
 img{
@@ -90,7 +88,7 @@ img{
 /*-------Books--------*/
 
 .genres{
-  width: 25%;
+  width: 20%;
   float: right;
   overflow: hidden;
   background: rgba(254, 254, 254, 0.5);
@@ -136,3 +134,59 @@ img{
   border-bottom: 1px dashed;
 }
 .book_navi_sort:hover {border-bottom: 1px solid #9B8381;}
+
+.book_img{
+  width: 30%;
+  float: left;
+  margin-top: 1.5em;
+}
+
+.books{
+ columns: 2;
+ text-align: center;
+}
+
+.book{
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.book_text{
+float: right;
+width: 65%;
+}
+
+.book p{
+  margin-top: -0.5em;
+  font-size: 0.9vw;
+}
+.book h4{
+  font-size: 1.1vw;
+}
+
+.book_link{
+  text-align: right;
+  padding-right: 0.5em;
+  font-size: 1vw;
+  margin-top: -0.5em;
+}
+
+.book p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.book_link a{
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #555555;
+}
+.book_link a:hover {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  text-decoration: underline;
+}
