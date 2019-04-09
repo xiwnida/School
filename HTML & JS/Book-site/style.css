@@ -49,11 +49,12 @@ nav a {
 }
 
 .navi {
-    display: inline-block;
-    color: #969696;
-    text-shadow: 1px 1px black;
-    letter-spacing: 1px;
-    border-bottom: 2px solid transparent;
+  display: inline-block;
+  color: #969696;
+  text-shadow: 1px 1px black;
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2vw;
 }
 
 .navi:hover {
@@ -189,4 +190,17 @@ width: 65%;
   top: 2px;
   left: 2px;
   text-decoration: underline;
+}
+
+/*------------Galery--------------*/
+
+.galery{
+  padding: 2em;
+  columns: 3;
+}
+
+.galery img{
+  width: 350px;
+  height: 200px;
+  display: inline-block;
 }
