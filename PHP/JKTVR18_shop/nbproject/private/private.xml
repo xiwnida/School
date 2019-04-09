@@ -3,17 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/route/routing.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/model/CartModel.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/model/ProductModel.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/controller/MainController.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/view/confirmPayment.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/controllerAdmin/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/viewAdmin/templates/layout.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/viewAdmin/formLogin.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/viewAdmin/startAdmin.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/index.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/controllerAdmin/AdminProductController.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/modelAdmin/AdminProductModel.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/routeAdmin/routing.php</file>
             <file>file:/C:/xampp/htdocs/JKTVR18_shop/model/MainModel.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/view/confirmOrder.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/controller/ProductController.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/view/RegisterResult.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/controller/CartController.php</file>
-            <file>file:/C:/xampp/htdocs/JKTVR18_shop/view/viewCart.php</file>
+            <file>file:/C:/xampp/htdocs/JKTVR18_shop/admin/viewAdmin/AdminProductList.php</file>
         </group>
     </open-files>
 </project-private>

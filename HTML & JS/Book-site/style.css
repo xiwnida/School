@@ -1,55 +1,206 @@
  .main{
- 	padding: 3em;
  	background-image: url('Images/bg.jpg');
  }
 
+ .main_two{
+    margin-left: 15%;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .9),
+        23px 0 20px -23px rgba(0, 0, 0, .9),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+ }
+
  header{
- 	width: 70%;
+ 	width: 95%;
+  margin-left: 2.5%;
  }
- header img{
- 	border-radius: 20px;
 
- }
- .main_content{
- 	margin-top: 5em;
- 	width: 50%;
- 	border: solid 3px;
- 	padding: 1em;
+.head{
+  text-align: center;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 6px -1px rgba(0, 0, 0, .8);
+}
 
-	border: solid 3px;
-	overflow: hidden;
-	background: linear-gradient(Cornsilk, BlanchedAlmond);
-	color: #0B610B;
-	border-radius: 20px;
-	box-shadow: 0px 0px 20px 5px #0A2A0A;
- }
  nav{
- 	width: 70%;
- 	background: rgba(254, 254, 254, 0.5);
- 	border-radius: 20px;
+  background: rgba(254, 254, 254, 0.5);
+  border-radius: 20px;
  }
+
+.foot{
+  text-align: center;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -6px 6px -1px rgba(0, 0, 0, .8);
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  font-size: 24px;
+  font-family: 'Fredoka One', cursive;
+  transition: .3s ease-in-out;
+}
+
+.navi {
+  display: inline-block;
+  color: #969696;
+  text-shadow: 1px 1px black;
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2vw;
+}
+
+.navi:hover {
+  color: #F54318;
+}
+
+.free_space{
+  margin-top: 5%;
+  overflow: hidden;
+}
 img{
 	width: 100%;
+  border-radius: 10px;
 }
-a {
- 	text-decoration: none;
- 	display: inline-block;
-  	padding: 5px 10px;
-  	letter-spacing: 1px;
- 	margin: 0 20px;
- 	font-size: 24px;
-  	font-family: 'Fredoka One', cursive;
-  	transition: .3s ease-in-out;
+
+.content_img{
+  width: 75%;
+  margin-top: 2em;
 }
-.navi {
-  	display: inline-block;
-  	color: #969696;
-  	text-shadow: 1px 1px black;
-  	letter-spacing: 1px;
-  	border-bottom: 2px solid transparent;
+
+/*-------Main page--------*/
+
+ .main_content{
+  width: 50%;
+  padding-left: 5em;
+  padding-right: 5em;
+  font-size: 1.3em;
+  overflow: hidden;
+ }
+
+
+/*-------Books--------*/
+
+.genres{
+  width: 20%;
+  float: right;
+  overflow: hidden;
+  background: rgba(254, 254, 254, 0.5);
+  padding: 1%;
+  border-radius: 0px 0px 0px 10px;
+  box-shadow: 6px 0 6px -1px rgba(0, 0, 0, .8);
+  text-align: right;
 }
-.navi:hover {
- 	color: #F54318;
-  	border-bottom: 2px solid #F54318;
-  	box-shadow: 0 1px 0 white, 0 2px 0 #969696;
+
+ .main_content2{
+  font-size: 1.3em;
+  overflow: hidden;
+ }
+
+ .free_space2{
+  margin-top: 0.3em;
+  overflow: hidden;
+}
+
+.genre {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font-family: 'Fredoka One', cursive;
+  transition: .3s ease-in-out;
+  font-size: 0.8vw;
+  border: 2px solid transparent;
+}
+.genre:hover {border: 2px solid #BA7D67;}
+
+.book_navi{
+  padding: 1em 0 1em 1em;
+  width: 70.3%;
+}
+
+.sort{
+  padding-right: 5%;
+}
+.book_navi_sort{
+  margin-left: 5%;
+  font-size: 1vw;
+  border-bottom: 1px dashed;
+}
+.book_navi_sort:hover {border-bottom: 1px solid #9B8381;}
+
+.book_img{
+  width: 30%;
+  float: left;
+  margin-top: 1.5em;
+}
+
+.books{
+ columns: 2;
+ text-align: center;
+}
+
+.book{
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 1em;
+}
+.book_text{
+float: right;
+width: 65%;
+}
+
+.book p{
+  margin-top: -0.5em;
+  font-size: 0.9vw;
+}
+.book h4{
+  font-size: 1.1vw;
+}
+
+.book_link{
+  text-align: right;
+  padding-right: 0.5em;
+  font-size: 1vw;
+  margin-top: -0.5em;
+}
+
+.book p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.book_link a{
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #555555;
+}
+.book_link a:hover {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  text-decoration: underline;
+}
+
+/*------------Galery--------------*/
+
+.galery{
+  padding: 2em;
+  columns: 3;
+}
+
+.galery img{
+  width: 350px;
+  height: 200px;
+  display: inline-block;
 }
