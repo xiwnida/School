@@ -3,6 +3,8 @@
 session_start();
     include_once '../inc/database.php';
     include_once '../model/MainModel.php'; //aut admin
+    include_once '../model/ProductModel.php';
+    
     include_once 'modelAdmin/AdminModel.php';
     include_once 'modelAdmin/AdminProductModel.php';
     

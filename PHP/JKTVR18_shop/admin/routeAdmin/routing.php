@@ -15,7 +15,19 @@ elseif($path == 'logout'){
 elseif($path == 'productAction'){
     $response = AdminProductController::ProductList();
 }
+elseif($path == 'addProduct'){
+    $response = AdminProductController::AddProductForm();
+}
+elseif($path == 'addProductResult'){
+    $response = AdminProductController::AddProductResult();
+}
 
+elseif($path = 'editProduct' && isset($_GET['id'])){
+    $response = AdminProductController::EditProductForm($_GET['id']);
+}
+elseif($path = 'editProductResult' && isset($_GET['id'])){
+    $response = AdminProductController::EditProductResult($_GET['id']);
+}
 else{
     
 }
