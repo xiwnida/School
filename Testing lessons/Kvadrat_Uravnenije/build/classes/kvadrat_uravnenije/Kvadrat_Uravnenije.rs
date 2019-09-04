@@ -1,0 +1,1 @@
+kvadrat_uravnenije.kvadrat_uravnenije
