@@ -1,0 +1,118 @@
+Err:Could not read sierra.iniTue Sep 10
+------------------------------------------------------------
+ 09:59:01   Err:Could not read sierra.ini
+ 09:59:01   OK :Game text loaded.
+ 09:59:01   Debug and status report on 
+ 09:59:01   OK :Active.  
+ 09:59:01   OK :DD SetCooperative Level.
+ 09:59:01   OK :DD Set resolution.
+ 09:59:01   OK :GFX DirectDraw enabled.
+ 09:59:01   OK :DD Creating one Vram only.
+ 09:59:04   OK :DD can lock primary surface 
+ 09:59:04   OK :DD Surface created.
+ 09:59:04   OK :DD surface_format is RGB 565.
+ 09:59:04   OK :Direct draw initialised.
+ 09:59:04   OK :Setup loaded DAT files.
+ 09:59:04   OK :Pharaoh setup.
+ 09:59:04    OK: model loaded
+ 09:59:04    OK: figure model data loaded
+ 09:59:04    OK: tax sentiment data loaded
+ 09:59:04    OK: trade_recommends data loaded
+ 09:59:04    OK: reason table loaded
+ 09:59:06   OK :Direct sound initialised.
+ 09:59:06   OK :Launching game loop.
+ 09:59:10   OK :DD Released.
+ 09:59:10   OK :DD SetCooperative Level.
+ 09:59:11   OK :DD Set resolution.
+ 09:59:11   OK :GFX DirectDraw enabled.
+ 09:59:11   OK :DD Creating one Vram only.
+ 09:59:13   OK :DD can lock primary surface 
+ 09:59:13   OK :DD Surface created.
+ 09:59:13   OK :DD surface_format is RGB 565.
+ 09:59:20   OK :DD Released.
+ 09:59:20   OK :DD SetCooperative Level.
+ 09:59:20   OK :DD Set resolution.
+ 09:59:20   OK :GFX DirectDraw enabled.
+ 09:59:20   OK :DD Creating one Vram only.
+ 09:59:23   OK :DD can lock primary surface 
+ 09:59:26   OK :DD Surface created.
+ 09:59:26   OK :DD surface_format is RGB 565.
+ 09:59:26   OK :SMK starting smack smk\logo.smk  
+ 09:59:26   ERR:SMK Could not open smk\logo.smk  
+ 09:59:26   MEM:Max alloc after =   
+ 09:59:26   OK :SMK starting smack smk\intro.smk  
+ 09:59:26   ERR:SMK Could not open smk\intro.smk  
+ 09:59:26   MEM:Max alloc after =   
+ 09:59:26   OK :SMK starting smack smk\credits.smk  
+ 09:59:26   ERR:SMK Could not open smk\credits.smk  
+ 09:59:26   MEM:Max alloc after =   
+ 09:59:30    OK: model loaded
+ 09:59:30    OK: figure model data loaded
+ 09:59:30    OK: tax sentiment data loaded
+ 10:00:26   OK :Paused.  
+ 10:00:26   OK :Paused.  
+ 10:00:26   OK :Not active.  
+ 10:00:36   OK :Active.  
+ 10:00:36   OK :Active.  
+ 10:05:24   OK :Paused.  
+ 10:05:24   OK :Paused.  
+ 10:05:24   OK :Not active.  
+ 10:05:48   OK :Active.  
+ 10:05:48   OK :Active.  
+ 10:09:39   OK :Paused.  
+ 10:09:39   OK :Paused.  
+ 10:09:39   OK :Not active.  
+ 10:10:18   OK :Active.  
+ 10:10:18   OK :Active.  
+ 10:12:27   OK :Paused.  
+ 10:12:27   OK :Paused.  
+ 10:12:27   OK :Not active.  
+ 10:13:56   OK :Active.  
+ 10:13:56   OK :Active.  
+ 10:15:14   OK :SMK starting smack djrfwbb c yfitq cnjhjys fnfrez yfib ujhjlf.  njkmrj ghbcencndbt afhfjyf vjCtn gjvjxm yfv cghfdbnmcz   
+ 10:15:14   ERR:SMK Could not open djrfwbb c yfitq cnjhjys fnfrez yfib ujhjlf.  njkmrj ghbcencndbt   
+ 10:15:14   MEM:Max alloc after = @4   
+ 10:15:56   OK :Paused.  
+ 10:15:56   OK :Paused.  
+ 10:15:56   OK :Not active.  
+ 10:48:52   OK :Active.  
+ 10:48:52   OK :Active.  
+ 10:49:29   OK :Paused.  
+ 10:49:29   OK :Paused.  
+ 10:49:29   OK :Not active.  
+ 10:50:54   OK :Active.  
+ 10:50:54   OK :Active.  
+ 10:51:56   OK :SMK starting smack m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxfnm c dfvb njhujdkE.  tckb ds cjukfcb  
+ 10:51:56   ERR:SMK Could not open m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxf  
+ 10:51:56   MEM:Max alloc after = @6   
+ 10:55:35   OK :SMK starting smack kybb rjktcybws jgecnjifEn dct yf cdjtv genb.  Dnbvb cnhfiysvb rjktcybwfvb, gjljFysA rjnjhsv vs tot y  
+ 10:55:35   ERR:SMK Could not open kybb rjktcybws jgecnjifEn dct yf cdjtv genb.  Dnbvb cnhfiysvb rj  
+ 10:55:35   MEM:Max alloc after = @9   
+ 10:55:48   OK :SMK starting smack m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxfnm c dfvb njhujdkE.  tckb ds cjukfcb  
+ 10:55:48   ERR:SMK Could not open m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxf  
+ 10:55:48   MEM:Max alloc after = @10   
+ 11:02:50   OK :SMK starting smack m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxfnm c dfvb njhujdkE.  tckb ds cjukfcb  
+ 11:02:50   ERR:SMK Could not open m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxf  
+ 11:02:50   MEM:Max alloc after = @13   
+ 11:05:41   OK :SMK starting smack m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxfnm c dfvb njhujdkE.  tckb ds cjukfcb  
+ 11:05:41   ERR:SMK Could not open m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxf  
+ 11:05:41   MEM:Max alloc after = @16   
+ 11:08:27   OK :SMK starting smack f gkfwlfhv, jyb hfpheibkb yfib njhujdst genb b pfAdfnbkb vyjubt yfif uheps.  vs ljkCys jcnfyjdbnm bA  
+ 11:08:27   ERR:SMK Could not open f gkfwlfhv, jyb hfpheibkb yfib njhujdst genb b pfAdfnbkb vyjubt   
+ 11:08:27   MEM:Max alloc after = @18   
+ 11:10:58   OK :SMK starting smack m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxfnm c dfvb njhujdkE.  tckb ds cjukfcb  
+ 11:10:58   ERR:SMK Could not open m vbrtycrbq epyfk j Fjufncndt b dtkbrjktgbb tubgnf b Ctkftn yfxf  
+ 11:10:58   MEM:Max alloc after = @20   
+ 11:14:29   OK :SMK starting smack hfzcm yf fdfhbc, rfr yf gkfwlfhv, jyb hfpheibkb yfib njhujdst genb b pfAdfnbkb vyjubt yfif uheps.  v  
+ 11:14:29   ERR:SMK Could not open hfzcm yf fdfhbc, rfr yf gkfwlfhv, jyb hfpheibkb yfib njhujdst ge  
+ 11:14:29   MEM:Max alloc after = @22   
+ 11:16:35   OK :SMK starting smack juexbq afhfjy, bp cdjtq cnhfys. @PxnjFs pfzdbnm j yfibA cthmtpysA ghbnzpfybzA yf yjdst ptvkb d yeFbb  
+ 11:16:35   ERR:SMK Could not open juexbq afhfjy, bp cdjtq cnhfys. @PxnjFs pfzdbnm j yfibA cthmtpys  
+ 11:16:35   MEM:Max alloc after = @25   
+ 11:16:42   OK :SMK starting smack djrfwbb c yfitq cnjhjys fnfrez yfib ujhjlf.  njkmrj ghbcencndbt afhfjyf vjCtn gjvjxm yfv cghfdbnmcz   
+ 11:16:42   ERR:SMK Could not open djrfwbb c yfitq cnjhjys fnfrez yfib ujhjlf.  njkmrj ghbcencndbt   
+ 11:16:42   MEM:Max alloc after = @25   
+ 11:18:32   OK :Not active.  
+ 11:18:32   OK :DD Released.
+ 11:18:32   OK :removed manmades=0  
+ 11:18:32   OK :Exited Normally  

@@ -1,0 +1,199 @@
+; campaign definition file
+; possible lines:
+; [MISSION_NAMES] - all the lines in this section identify the names of the missions in the pak file
+; [<campaign name>] - identifies the start of a campaign
+; mission=<mission>,<intro_MM>,<victory/transition text>[,<path_id>[,merge_path1[,merge_path2]...]]
+; choicescreen=<graphic id>,<title text id> (contained in Pharaoh_text.txt  *144)
+; choice=<path_id>,<x>,<y>,<text> (contained in Pharaoh_text.txt  *144)
+; mission ids are shared by all campaign sections
+; path_id's work somewhat as 'goto' labels but there can be multiple missions with the same path_id.
+; When a choice is made, the next mission with a path_id corresponding to that choice is taken and that path 
+; is stayed on until another choice is made. There is no way to 'backtrack' in a campaign.
+; A mission with a path_id of 0 will always be played and the current path will be set to 0.  This is the 
+; mechanism for merging paths.  If you want to have the same mission played in different paths and still 
+; keep the paths seperate, you can have the same mission id appear in different places with different path_ids.
+
+;------------
+; intro specifies an MM section.  The first one is FIRST_BREIFING_ENTRY (*200)
+; transition text is in text section TXT_VICTORY_SPEECH (*147).  The id offsets into it.
+; choicescreen graphic offset is relative to sprite tag SPR_ASSIGNMENTS
+; choicescreen title text is in section TXT_ASSIGNMENTS (*144)
+; choice text is also in section TXT_ASSIGNMENTS
+;----------
+
+[MISSION_NAMES]
+Nubt (Naqada)
+Thinis
+Perwadjyt (Buto)
+Nekhen (Hierkonpolis)
+Men-nefer (Memphis)
+Timna
+Behdet (Apollinopolis)
+Abedju (Abydos)
+Selima Oasis
+Abu (Elephantine)
+Saqqara
+Serabit Khadim
+Meidum
+Buhen
+South Dahshur
+North Dahshur
+Iunet (Dendera)
+On (Heliopolis)
+Rostja (Giza)
+Bahariya Oasis
+Djedu (Abusir)
+Dunqul Oasis
+Dakhla Oasis
+Thinis
+Waset (Thebes)
+Kebet (Coptos)
+Menat Khufu (Beni Hassan)
+Itjtawy
+Iken (Mirgissa)
+Sawu (Mersa Gawasis)
+Heh (Semna)
+Bubastis
+Khmun (Hermopolis)
+Sauty (Lykopolis)
+Byblos
+Baki (Kuban)
+Rowarty (Avaris)
+Hetepsenusret (Kahun)
+
+
+
+
+[PREDYNASTIC_PERIOD]
+mission=0,200,0,0
+mission=1,201,1,0
+mission=2,202,2,0
+
+[ARCHAIC_PERIOD]
+mission=3,203,3,0
+mission=4,204,4,0
+
+mission=5,205,5,0
+choicescreen= 0,19 
+choice= 1,436,328,20 
+choice= 2,363,245,21 
+
+mission=6,206,6,1
+
+mission=7,207,7,2
+
+[OLD_KINGDOM]
+
+; starts with a choice
+choicescreen= 1,22
+choice= 3,297,355,23 
+choice= 4,457,287,24
+
+mission=8,208,8,3
+mission=9,209,9,4
+
+mission=10,210,10,0
+choicescreen= 2,28
+choice= 5,401,97,29 
+choice= 6,291,105,30
+
+mission=11,211,11,5
+choicescreen= 3,31
+choice= 7,418,354,32 
+choice= 8,284,4,33
+
+mission=12,212,12,6
+choicescreen= 3,31
+choice= 7,418,354,32 
+choice= 8,284,4,33
+
+mission=13,213,13,7
+mission=14,214,14,8
+
+mission=15,215,15,0
+choicescreen= 2,37
+choice= 9,404,238,38 
+choice= 10,284,54,39
+
+mission=16,216,16,9
+mission=17,217,17,10
+
+mission=18,218,18,0
+choicescreen= 2,43
+choice= 11,198,149,44 
+choice= 12,252,29,45
+
+mission=19,219,19,11
+choicescreen= 1,46
+choice= 13,415,290,47 
+choice= 14,224,196,48
+
+mission=20,220,20,12
+choicescreen= 1,46
+choice= 13,415,290,47 
+choice= 14,224,196,48
+
+mission=21,221,21,13
+mission=22,222,22,14
+
+[MIDDLE_KINGDOM]
+; initial choice
+
+choicescreen= 4,49
+choice= 15,287,265,50 
+choice= 16,451,348,51
+
+
+mission=23,223,23,15
+choicescreen= 4,52
+choice= 17,476,289,53 
+choice= 18,97,45,54
+
+mission=24,224,24,16
+choicescreen= 4,52
+choice= 17,476,289,53 
+choice= 18,97,45,54
+
+mission=25,225,25,17
+
+mission=26,226,26,18
+
+mission=27,227,27,0
+choicescreen= 1,58
+choice= 19,415,355,59 
+choice= 20,473,124,60
+
+mission=28,228,28,19
+choicescreen= 5,61
+choice= 21,360,300,62 
+choice= 22,285,29,63
+
+mission=29,229,29,20
+choicescreen= 5,61
+choice= 21,360,300,62 
+choice= 22,285,29,63
+
+mission=30,230,30,21
+mission=31,231,31,22
+
+[NEW_KINGDOM]
+; starts with a choice
+
+choicescreen= 6,64
+choice= 23,75,95,65 
+choice= 24,232,212,66
+
+mission=32,232,32,23
+choicescreen= 7,67
+choice= 25,445,24,68 
+choice= 26,464,317,69
+
+mission=33,233,33,24
+choicescreen= 7,67
+choice= 25,445,24,68 
+choice= 26,464,317,69
+
+mission=34,234,34,25
+mission=35,235,35,26
+mission=36,236,36,25
+mission=37,237,37,26

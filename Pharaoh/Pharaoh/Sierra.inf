@@ -1,0 +1,30 @@
+[Ident]
+ProductID=70831
+Version=1.0.0.0
+PatchVersion=1.0.0.0
+FullName=Pharaoh
+ShortTitle=Pharaoh
+StrippedDemo=0
+UpdateAfter=01-01-2000
+WebPage=http://www.Pharaoh1.com
+Readme=readme.txt
+
+
+[Demos]
+Lomse = Lords of Magic: Special Edition
+Cwg2 = Civil War Generals II
+
+[Bookmarks]
+http://www.Pharaoh1.com=The Pharaoh web site
+
+[Systest]
+ScreenWidth=640
+ScreenHeight=480
+Colors=65000
+MemKB=33500
+Winver=395
+Wave=0
+Processor=Pentium-133
+
+[Setup]
+InstallShield=1
