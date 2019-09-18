@@ -1,0 +1,11 @@
+Day	Month	Year
+1to28	Feb	Leap
+31	30days	Leap
+1to28	31days	Common
+30	30days	Common
+29	Feb	Leap
+31	31days	Leap
+30	30days	Leap
+1to28	30days	Leap
+1to28	Feb	Common
+31	31days	Common

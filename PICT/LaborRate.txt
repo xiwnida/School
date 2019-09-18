@@ -1,0 +1,7 @@
+Dealer_Dealergroup: Any Dealer,Any Group,Blank
+Product: Any Product,Blank
+Warranty_Type: Standard,Extended,Goodwill,All
+Claim_Type: Machine,Parts,All
+Labor_rate: Integer,Decimal
+
+IF [Warranty_Type] = "Standard" THEN [Claim_Type] = "Machine";

@@ -1,0 +1,8 @@
+Day: 1to28,29,30,31
+Month: 30days,31days,Feb
+Year: Common,Leap
+
+IF [Day] = "29" THEN [Month] = "Feb";
+IF [Day] = "29" and [Month] = "Feb" THEN [Year] ="Leap";
+IF [Day] = "30" THEN [Month] ="30days";
+IF [Day] = "31" THEN [Month] <> "Feb";

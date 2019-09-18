@@ -1,0 +1,14 @@
+Dealer_Dealergroup	Product	Warranty_Type	Claim_Type	Labor_rate
+Blank	Blank	Standard	Machine	Integer
+Any Group	Any Product	Goodwill	Parts	Decimal
+Any Dealer	Blank	Goodwill	All	Integer
+Any Group	Any Product	Extended	Machine	Integer
+Any Group	Blank	All	All	Decimal
+Any Group	Any Product	Standard	Machine	Decimal
+Blank	Any Product	Goodwill	Parts	Decimal
+Any Dealer	Any Product	Goodwill	Machine	Decimal
+Any Dealer	Blank	Extended	Parts	Decimal
+Blank	Any Product	All	Parts	Integer
+Any Dealer	Blank	Standard	Machine	Integer
+Any Dealer	Any Product	All	Machine	Integer
+Blank	Any Product	Extended	All	Integer
